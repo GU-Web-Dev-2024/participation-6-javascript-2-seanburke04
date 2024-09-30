@@ -55,6 +55,9 @@
 
     <script>
         // JavaScript code goes here   
+        let randNum = Math.floor(Math.random * 11);
+        let guessCounter = 0;
+        
 
 
         // Added a click listener to the button (will be covered more in zyBook 7.4), 
@@ -64,6 +67,17 @@
         // executes the code in the body of the anonymous function
         document.getElementById('guess-button').addEventListener('click', function () {
             //function body -- any code here will be executed when the registered event is triggered.
+            guessCounter = guessCounter + 1;
+            let userGuess = document.getElementById('guess-button');
+            if (userGuess == randNum){
+                document.getElementById('message').innerText = "Correct!";
+            }
+            else if (userGuess > randNum){
+                document.getElementById('message').innerText = "Too High!";
+            }
+            else{
+                document.getElementById('message').innerText = "Too Low!";
+            }
         });
 
     </script>
