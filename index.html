@@ -68,7 +68,7 @@
         document.getElementById('guess-button').addEventListener('click', function () {
             //function body -- any code here will be executed when the registered event is triggered.
             guessCounter = guessCounter + 1;
-            let userGuess = document.getElementById('guess-button');
+            let userGuess = document.getElementById('guess-input');
             if (userGuess == randNum){
                 document.getElementById('message').innerText = "Correct!";
             }
